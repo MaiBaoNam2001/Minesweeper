@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MineSweeper</title>
+<link rel="stylesheet" href="CSS/MS.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<h1 id="header">MineSweeper</h1>
+    <div class="function">
+        <button id="validate">Validate</button>
+       	<button id="cheat">Cheat</button>
+        <button id="save">Save Game</button>
+    </div>
+    <table id="ms"></table>
+    <div class="function">
+    	Level:
+        <select id="level" name="level">
+        	<option value="easy" selected>Easy (8x8, 10 mines)</option>
+            <option value="intermediate">Intermediate (12x12, 20 mines)</option>
+            <option value="expert">Expert (16x16, 40 mines)</option>
+            <option value="custom">Custom</option>
+        </select>
+        <button id="new">New Game</button>
+       	<br>
+        <div id="customSection">
+        	Height:
+            <input type="number" id="height" class="custom" value="8" min="8" max="24">
+            Width:
+            <input type="number" id="width" class="custom" value="8" min="8" max="24">
+            Mines:
+            <input type="number" id="mine" class="custom" value="10" min="10">
+        </div>
+    </div>
+    <div class="savedSection">
+    	<h2>Your Saved Games:</h2>
+        <div id="saved"></div>
+    </div>
+    <script src="Javascript/MS.js"></script>
+</body>
+</html>
